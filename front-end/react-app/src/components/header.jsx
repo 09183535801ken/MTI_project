@@ -1,19 +1,40 @@
+import { useState } from 'react'
+
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   return (
     <header className="site-header">
       <div className="container header-content">
-        <div className="logo">TMI</div>
-        <nav className="nav-links">
-          <a href="#top">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#principals">Principals</a>
-          <a href="#seafarers">Seafarers</a>
-          <a href="#training">Training</a>
-          <a href="#news">News</a>
-          <a href="#contact">Contact</a>
+        <div className="logo">
+          <img
+            src="/src/assets/TMI_logo.png"
+            alt="TMI logo"
+            className="logo-icon"
+          />
+          <div className="logo-text">
+            <div className="logo-main">TMI</div>
+            <div className="logo-subtitle">TUTELA MARINE INC.</div>
+          </div>
+        </div>
+        <button
+          className="menu-toggle"
+          aria-label="Toggle navigation"
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          ☰
+        </button>
+        <nav className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
+          <a className="nav-link" href="#top">Home</a>
+          <a className="nav-link" href="#about">About Us</a>
+          <a className="nav-link" href="#services">Services</a>
+          <a className="nav-link" href="#principals">Principals</a>
+          <a className="nav-link" href="#seafarers">Seafarers</a>
+          <a className="nav-link" href="#training">Training</a>
+          <a className="nav-link" href="#news">News</a>
+          <a className="nav-link" href="#contact">Contact</a>
         </nav>
-        <button className="btn btn-outline">Seafarer Jobs</button>
+       
       </div>
     </header>
   )
