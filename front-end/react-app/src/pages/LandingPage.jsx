@@ -1,7 +1,20 @@
-import Header from './components/header.jsx'
-import './App.css'
 
-function Landing() {
+import Header from "../components/layout/header";
+import '../App.css';
+
+function LandingPage() {
+  
+  /*  return (
+    <>
+      <Hero />
+      <About />
+      <Services />
+      <Features />
+      <Contact />
+    </>
+  );
+  */
+
   return (
     <div className="landing">
       <Header />
@@ -101,4 +114,4 @@ function Landing() {
   )
 }
 
-export default Landing
+export default LandingPage;
