@@ -1,3 +1,5 @@
+import vesselLogo from '../../assets/logo_vessel.webp'
+
 function Hero() {
 
   return (
@@ -18,9 +20,35 @@ function Hero() {
 
       <div className="stats-card-container">
         <div className="stats-card">
-          <div className="stat-item"></div>
-          <div className="stat-item"></div>
-          <div className="stat-item"></div>
+          <div className="stat-item">
+            <div className="stat-icon" aria-hidden="true">
+              <img src={vesselLogo} alt="" />
+            </div>
+            <div className="stat-text">
+              <div className="stat-value">600+</div>
+              <div className="stat-label">Vessels Managed</div>
+            </div>
+          </div>
+
+          <div className="stat-item">
+            <div className="stat-icon" aria-hidden="true">
+              <img src={vesselLogo} alt="" />
+            </div>
+            <div className="stat-text">
+              <div className="stat-value">8,200+</div>
+              <div className="stat-label">Deployed Seafarers</div>
+            </div>
+          </div>
+
+          <div className="stat-item">
+            <div className="stat-icon" aria-hidden="true">
+              <img src={vesselLogo} alt="" />
+            </div>
+            <div className="stat-text">
+              <div className="stat-value">1,500+</div>
+              <div className="stat-label">Monthly Trainees</div>
+            </div>
+          </div>
         </div>
 
       </div>
