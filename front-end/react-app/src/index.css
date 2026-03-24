@@ -2,9 +2,9 @@
 
 :root {
   /* Maritime color theme */
-  --primary: #007BFF;
+  --primary: #008cff;
   --secondary: #28A745;
-  --tertiary: #003366;
+  --tertiary: #06325f;
   --white-text: #ffffff;
   --light-text: #e2e2e2;
 
@@ -44,6 +44,7 @@
 body {
   margin: 0;
   font-family: var(--font-primary);
+  scroll-behavior: smooth;
 }
 
 #root {

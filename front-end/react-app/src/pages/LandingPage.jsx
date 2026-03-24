@@ -1,7 +1,9 @@
 
 import Header from "../components/layout/header";
+import Footer from "../components/layout/footer";
 import Hero from "../components/landing/Hero";
 import '../App.css';
+
 
 function LandingPage() {
   
@@ -60,16 +62,7 @@ function LandingPage() {
         </section>
       </main>
 
-      <footer className="site-footer">
-        <div className="container footer-content">
-          <span>© {new Date().getFullYear()} MyLanding. All rights reserved.</span>
-          <span className="footer-links">
-            <a href="#features">Features</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
