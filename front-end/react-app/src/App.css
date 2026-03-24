@@ -239,17 +239,86 @@
 
 .stats-card {
   display: flex;
-  justify-content: space-around;
-  width: 100%;  
-  height: 160px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
   border-radius: 10px;
   background: white;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
 }
 .stats-card .stat-item {
-  background: white;
-  font-size: 0.95rem;
+  background: #fff;
+  min-width: 0;
+  padding: 22px 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* vertically center icon with the text block */
+  justify-content: center;
+  text-align: left;
+  gap: 14px;
+  flex: 1 1 33.333%;
+  border-left: 1px solid rgba(1, 116, 221, 0.18); /* vertical divider */
+  box-sizing: border-box;
+}
+
+/* Remove divider for the first column in a 3-column layout */
+.stats-card .stat-item:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.stats-card .stat-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #044480;
+  flex: 0 0 auto;
+}
+
+.stats-card .stat-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Support when the icon image is placed directly under .stat-item (no .stat-icon wrapper) */
+.stats-card .stat-item > img {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.stats-card .stat-text {
+  display: flex;
+  flex-direction: column; /* stack stat-value then stat-label */
+  gap: 6px;
+  min-width: 0;
+}
+
+.stats-card .stat-value {
+  margin-top: 0;
+  font-weight: 800;
+  font-size: clamp(22px, 3.2vw, 36px);
+  color: #044480;
+  letter-spacing: 0.2px;
+}
+
+.stats-card .stat-label {
+  font-size: clamp(12px, 1.5vw, 14px);
+  line-height: 1.25;
+  color: rgba(4, 68, 128, 0.9);
+  font-weight: 500;
+  max-width: 20ch;
+  word-break: break-word;
 }
 
 .feature-section {
@@ -340,6 +409,18 @@
     grid-template-columns: 1fr;
   }
 
+  .hero-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    gap: 18px;
+  }
+
   .header-content {
     gap: 8px;
     flex-wrap: wrap;
@@ -403,5 +484,51 @@
 
   .hero-text h1 {
     font-size: 32px;
+  }
+
+  /* Stats dashboard */
+  .stats-card-container {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    padding: 0 15%;
+    box-sizing: border-box;
+    margin-top: 20px;
+  }
+
+  .stats-card {
+    flex-direction: row;
+  }
+
+  .stats-card .stat-item {
+    flex: 1 1 50%;
+  }
+
+  /* Hide divider on first item in each row for 2-column layout */
+  .stats-card .stat-item:nth-child(2n + 1) {
+    border-left: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-card-container {
+    padding: 0 12px;
+  }
+
+  .stats-card {
+    flex-direction: column;
+  }
+
+  .stats-card .stat-item {
+    flex: 1 1 100%;
+    border-left: none;
+    padding: 18px 10px;
+    gap: 12px;
+  }
+
+  .stats-card .stat-label {
+    max-width: 28ch;
   }
 }
