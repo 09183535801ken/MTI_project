@@ -1,4 +1,5 @@
 import vesselLogo from '../../assets/logo_vessel.webp'
+import CountUp from '../../components/animations/CountUp';
 
 function Hero() {
 
@@ -17,7 +18,6 @@ function Hero() {
         </div>
       </div>
 
-
       <div className="stats-card-container">
         <div className="stats-card">
           <div className="stat-item">
@@ -25,7 +25,15 @@ function Hero() {
               <img src={vesselLogo} alt="" />
             </div>
             <div className="stat-text">
-              <div className="stat-value">600+</div>
+              <div className="stat-value">
+                <CountUp
+                  from={0}
+                  to={600}
+                  duration={2} 
+                  separator=","
+                />
+                <span className="plus-sign">+</span>
+              </div>
               <div className="stat-label">Vessels Managed</div>
             </div>
           </div>
@@ -35,7 +43,15 @@ function Hero() {
               <img src={vesselLogo} alt="" />
             </div>
             <div className="stat-text">
-              <div className="stat-value">8,200+</div>
+              <div className="stat-value">
+                <CountUp
+                  from={0}
+                  to={8200}
+                  duration={2}
+                  separator=","
+                />
+                <span className="plus-sign">+</span>
+              </div>
               <div className="stat-label">Deployed Seafarers</div>
             </div>
           </div>
@@ -45,7 +61,15 @@ function Hero() {
               <img src={vesselLogo} alt="" />
             </div>
             <div className="stat-text">
-              <div className="stat-value">1,500+</div>
+              <div className="stat-value">
+              <CountUp
+                  from={0}
+                  to={1500}
+                  duration={2}
+                  separator=","
+                />
+                <span className="plus-sign">+</span>
+              </div>
               <div className="stat-label">Monthly Trainees</div>
             </div>
           </div>

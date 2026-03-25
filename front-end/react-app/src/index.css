@@ -3,12 +3,13 @@
 :root {
   /* Maritime color theme */
   --primary: #008cff;
-  --secondary: #28A745;
+  --secondary: #28a77d;
   --tertiary: #06325f;
   --white-text: #ffffff;
   --light-text: #e2e2e2;
+  --grey-text: #a8a8a8;
 
-  --bg: #f3f7fb;
+  --bg: #f5f5f5;
   --border: #d3e1ee;
   --code-bg: #e6f1fb;
   --accent: #0077b6;
