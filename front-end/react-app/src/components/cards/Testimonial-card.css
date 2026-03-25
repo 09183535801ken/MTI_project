@@ -1,0 +1,74 @@
+.testi-card {
+  background-color: transparent;
+}
+
+.testi-card__grid {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+/* Image Column with Glow */
+.testi-card__image-container {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.testi-card__image {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+}
+
+/* The Gradient Glow (Matching your colors) */
+.testi-card__glow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  /* background: linear-gradient(135deg, #1CACE6 0%, #3bff76 100%); */
+  filter: blur(60px);
+  /* This gives that soft, atmospheric look */
+  opacity: 0.4;
+}
+
+/* Content Column */
+.testi-card__content {
+  flex: 1.5;
+  max-width: 420px;
+}
+
+.testi-card__body p {
+  font-size: 1  rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.testi-card__footer {
+  margin-top: auto;
+  gap: 2px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testi-card__footer .authorName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.testi-card__footer p {
+  font-size: 16px;
+  color: #333;
+}

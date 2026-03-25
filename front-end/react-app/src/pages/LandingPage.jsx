@@ -2,6 +2,8 @@
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import Hero from "../components/landing/Hero";
+
+import Testimonial from "../components/landing/Testimonial";
 import '../App.css';
 
 
@@ -49,17 +51,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section id="contact" className="section">
-          <div className="container cta">
-            <div>
-              <h2>Ready to customize this page?</h2>
-              <p className="section-subtitle">
-                Start editing the text and components to make it your own.
-              </p>
-            </div>
-            <button className="btn btn-primary">Start Editing</button>
-          </div>
-        </section>
+        <Testimonial />
       </main>
 
       <Footer />
