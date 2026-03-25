@@ -1,4 +1,6 @@
 import vesselLogo from '../../assets/logo_vessel.webp'
+import deploy from '../../assets/people.png'
+import train from '../../assets/logo_vessel.webp'
 import CountUp from '../../components/animations/CountUp';
 
 function Hero() {
@@ -20,10 +22,8 @@ function Hero() {
 
       <div className="stats-card-container">
         <div className="stats-card">
-          <div className="stat-item">
-            <div className="stat-icon" aria-hidden="true">
-              <img src={vesselLogo} alt="" />
-            </div>
+          <div className="stat-item  stat-item1">
+            <img src={vesselLogo} alt="" aria-hidden="true" className="img1" />
             <div className="stat-text">
               <div className="stat-value">
                 <CountUp
@@ -38,10 +38,8 @@ function Hero() {
             </div>
           </div>
 
-          <div className="stat-item">
-            <div className="stat-icon" aria-hidden="true">
-              <img src={vesselLogo} alt="" />
-            </div>
+          <div className="stat-item stat-item2">
+            <img src={deploy} alt="" aria-hidden="true" className="img2" />
             <div className="stat-text">
               <div className="stat-value">
                 <CountUp
@@ -56,10 +54,8 @@ function Hero() {
             </div>
           </div>
 
-          <div className="stat-item">
-            <div className="stat-icon" aria-hidden="true">
-              <img src={vesselLogo} alt="" />
-            </div>
+          <div className="stat-item stat-item3">
+            <img src={train} alt="" aria-hidden="true" className="img3" />
             <div className="stat-text">
               <div className="stat-value">
               <CountUp

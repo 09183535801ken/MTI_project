@@ -90,6 +90,9 @@ h2 {
 p {
   margin: 0;
 }
+img{
+  size: 100px;
+}
 
 code,
 .counter {

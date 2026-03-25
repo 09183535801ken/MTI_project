@@ -281,21 +281,32 @@
 }
 
 .stats-card .stat-icon img {
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
 /* Support when the icon image is placed directly under .stat-item (no .stat-icon wrapper) */
-.stats-card .stat-item > img {
-  width: 30px;
-  height: 30px;
+.stats-card .stat-item > img{
+  width: 60px;
+  height: 60px;
   border-radius: 999px;
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
   object-fit: contain;
   flex: 0 0 auto;
 }
+
+.stats-card .stat-item > svg {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px; /* works visually because we render a background + border on the svg element */
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  flex: 0 0 auto;
+  color: #01745dd0; /* drives `fill="currentColor"` inside the svg */
+}
+
 
 .stats-card .stat-text {
   display: flex;
