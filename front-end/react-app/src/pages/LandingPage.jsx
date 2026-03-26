@@ -2,10 +2,10 @@
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import Hero from "../components/landing/Hero";
-
 import Testimonial from "../components/landing/Testimonial";
-import '../App.css';
+import CTA from "../components/landing/CTA";
 
+import '../App.css';
 
 function LandingPage() {
   
@@ -52,6 +52,7 @@ function LandingPage() {
         </section>
 
         <Testimonial />
+        <CTA />
       </main>
 
       <Footer />
