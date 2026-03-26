@@ -346,26 +346,13 @@
   word-break: break-word;
 }
 
+
+/* Landing Section */
+
 .feature-section {
   padding-top: 120px;
 }
 
-
-
-/* Sections */
-.section {
-  padding: 40px 0;
-  border-top: 1px solid var(--border);
-}
-
-.section.muted {
-  background: var(--code-bg);
-}
-
-.section-subtitle {
-  margin-top: 8px;
-  color: var(--text);
-}
 
 .feature-grid {
   display: grid;
@@ -382,9 +369,29 @@
 }
 
 .feature-card h3 {
+  color: var(--tertiary);
   margin: 0 0 8px;
   font-size: 18px;
 }
+
+/* Landing page 3-image icon row */
+
+.landing-feature {
+  display: flex;
+}
+
+.landing-features .feature-card {
+  text-align: center;
+}
+
+.landing-features .feature-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
 
 .feature-card p {
   margin: 0;
