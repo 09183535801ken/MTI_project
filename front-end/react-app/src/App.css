@@ -171,7 +171,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible; /* allow stats-card to float outside */
+  overflow: visible;
+  /* allow stats-card to float outside */
   background-image: url('/src/assets/background/hero-bg.png');
   background-size: cover;
   background-position: 0% 70%;
@@ -231,14 +232,15 @@
 
 .stats-card-container {
   position: absolute;
-  bottom: 0;          
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, 50%); 
+  transform: translate(-50%, 50%);
   flex: 1;
   width: 70%;
-  z-index: 5;       /* Ensures it stays on top of the next section */
+  z-index: 5;
 }
 
+/* Stats dashboard */
 .stats-card {
   display: flex;
   flex-wrap: wrap;
@@ -246,9 +248,10 @@
   height: 160px;
   border-radius: 10px;
   background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
+
 .stats-card .stat-item {
   background: #fff;
   min-width: 0;
@@ -258,36 +261,47 @@
   text-align: left;
   gap: 14px;
   flex: 1 1 33.333%;
-  border-left: 1px solid rgba(1, 116, 221, 0.18); 
+  border-left: 1px solid rgba(1, 116, 221, 0.18);
   box-sizing: border-box;
 }
 
-/* Remove divider for the first column in a 3-column layout */
 .stats-card .stat-item:nth-child(3n + 1) {
   border-left: none;
 }
 
 .stats-card .stat-icon {
-  width: 54px;
-  height: 54px;
+  width: 70px;
+  height: 70px;
   border-radius: 999px;
-  background: var(--accent-bg);
-  border: 1px solid var(--accent-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #044480;
+  padding: 0;
+  background: transparent; /* let GradientCircleWrapper provide the visible background */
+  border: none;
   flex: 0 0 auto;
 }
 
-.stats-card .stat-icon img {
-  width: 100px;
-  height: 100px;
-  object-fit: contain;
+.gradient-circle-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #057cac 0%, #3ae487 100%);
+  flex: 0 0 auto;
 }
 
-/* Support when the icon image is placed directly under .stat-item (no .stat-icon wrapper) */
-.stats-card .stat-item > img{
+.gradient-circle-icon svg {
+  width: 60%;
+  height: 60%;
+  display: block;
+  fill: white;
+}
+
+
+.stats-card .stat-item>img {
   width: 60px;
   height: 60px;
   border-radius: 999px;
@@ -297,20 +311,19 @@
   flex: 0 0 auto;
 }
 
-.stats-card .stat-item > svg {
+.stats-card .stat-item>svg {
   width: 60px;
   height: 60px;
-  border-radius: 999px; /* works visually because we render a background + border on the svg element */
+  border-radius: 999px;
   background: var(--accent-bg);
   border: 1px solid var(--accent-border);
   flex: 0 0 auto;
-  color: #01745dd0; /* drives `fill="currentColor"` inside the svg */
+  color: #01745dd0;
 }
-
 
 .stats-card .stat-text {
   display: flex;
-  flex-direction: column; /* stack stat-value then stat-label */
+  flex-direction: column;
   gap: 6px;
   min-width: 0;
 }
@@ -334,9 +347,9 @@
 }
 
 .feature-section {
-  
   padding-top: 120px;
 }
+
 
 
 /* Sections */
@@ -388,14 +401,14 @@
 
 /* Testimonial */
 .testimonial-section {
-  min-height: 70vh; 
+  min-height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: var(--bg);
   padding: 0 15%;
-  gap: 48px;
+  gap: 1rem;
 }
 
 .testimonial-header {
@@ -403,20 +416,24 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 18px;
 }
 
 .testimonial-header h2 {
-  font-size: 2.8rem;
+  font-size: 3.6rem;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   color: var(--tertiary);
 }
 
 .testimonial-header p {
   text-align: center;
-  font-size: 18px;
-  color: var(--grey-text);
+  font-weight: 600;
+  font-size: 1.2rem;
+  background: var(--maritime-gradient);
+  -webkit-background-clip: text;  
+  background-clip: text;        
+  -webkit-text-fill-color: transparent;
 }
 
 .testimonial-container {
@@ -427,47 +444,42 @@
   gap: 3rem;
 }
 
-/* Fade-In Animation */
-.fade-in {
-  animation: fadeIn 0.6s ease-in-out;
+.testimonial-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0 0;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(10px);
-  }
-  to {
-      opacity: 1;
-      transform: translateY(0);
-  }
-}
 
-/* Radio Button Styling */
-.testimonial-pagination {
+.testimonial-track {
   display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 20px;
-}
-
-.testimonial-radio {
-  cursor: pointer;
-  appearance: none;
-  background-color: #c2c2c2;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.testimonial-radio:checked {
-  background-color: #0080ff;
-  transform: scale(1.3);
-  box-shadow: 0 0 10px rgba(28, 172, 230, 0.5);
+  width: max-content;
+  gap: 3rem;
+  animation: scrollInfinite 40s linear infinite;
 }
 
 
+.testimonial-track:hover {
+  animation-play-state: paused;
+}
+
+.testimonial-slide-item {
+  width: 600px;
+  flex-shrink: 0;
+}
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
 
 /* Footer */
 .site-footer {
@@ -544,6 +556,7 @@
   color: var(--light-text);
   text-decoration: none;
 }
+
 .footer-col a:hover {
   color: var(--white-text);
 }
@@ -554,6 +567,7 @@
   align-items: center;
   gap: 12px;
 }
+
 .footer-note {
   margin-top: 6px;
   color: var(--light-text);
@@ -754,6 +768,3 @@
     max-width: 28ch;
   }
 }
-
-
-
