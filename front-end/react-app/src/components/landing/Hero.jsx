@@ -1,12 +1,14 @@
-import vesselLogo from '../../assets/logo_vessel.webp'
-import deploy from '../../assets/people.png'
-import train from '../../assets/logo_vessel.webp'
 import CountUp from '../../components/animations/CountUp';
+import { IconGradient, VesselIcon, PeopleIcon, TrainingIcon } from '../library/IconLibrary';
+
 
 function Hero() {
 
   return (
     <section className="hero-section">
+      {/* inject gradient defs for the icon fills */}
+      <IconGradient />
+
       <div className="hero-container container">
         <div className="hero-text">
           <h1>Dedicated provider of quality maritime solutions.</h1>
@@ -23,7 +25,9 @@ function Hero() {
       <div className="stats-card-container">
         <div className="stats-card">
           <div className="stat-item  stat-item1">
-            <img src={vesselLogo} alt="" aria-hidden="true" className="img1" />
+            <div className="stat-icon">
+              <VesselIcon width="60" height="60" aria-hidden="true" focusable="false" />
+            </div>
             <div className="stat-text">
               <div className="stat-value">
                 <CountUp
@@ -39,7 +43,9 @@ function Hero() {
           </div>
 
           <div className="stat-item stat-item2">
-            <img src={deploy} alt="" aria-hidden="true" className="img2" />
+            <div className="stat-icon">
+              <PeopleIcon width="60" height="60" aria-hidden="true" focusable="false" />
+            </div>
             <div className="stat-text">
               <div className="stat-value">
                 <CountUp
@@ -55,7 +61,9 @@ function Hero() {
           </div>
 
           <div className="stat-item stat-item3">
-            <img src={train} alt="" aria-hidden="true" className="img3" />
+            <div className="stat-icon">
+              <TrainingIcon width="60" height="60" aria-hidden="true" focusable="false" />
+            </div>
             <div className="stat-text">
               <div className="stat-value">
               <CountUp
