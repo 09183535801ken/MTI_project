@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from '../../assets/icons/logo/TMI_logo.png' 
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -8,7 +9,7 @@ function Header() {
       <div className="container header-content">
         <div className="logo">
           <img
-            src="/src/assets/TMI_logo.png"
+            src={logo}
             alt="TMI logo"
             className="logo-icon"
           />
