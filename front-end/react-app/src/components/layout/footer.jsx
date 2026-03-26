@@ -1,4 +1,6 @@
 import React from 'react';
+
+import logo from '../../assets/icons/logo/TMI_logo.png' 
 import { IconGradient, PhoneIcon, EnvelopeIcon } from '../library/IconLibrary';
 
 function Footer() {
@@ -10,7 +12,7 @@ function Footer() {
           <div className="footer-col footer-brand">
             <div className="logo">
               <img
-                src="/src/assets/TMI_logo.png"
+                src={logo}
                 alt="TMI logo"
                 className="logo-icon"
               />
