@@ -369,6 +369,7 @@
 }
 
 .feature-card h3 {
+  color: var(--tertiary);
   margin: 0 0 8px;
   font-size: 18px;
 }
@@ -377,6 +378,19 @@
   margin: 0;
   font-size: 14px;
   color: var(--text);
+}
+
+/* Landing page 3-image icon row */
+.landing-features .feature-card {
+  text-align: center;
+}
+
+.landing-features .feature-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 999px;
+  display: block;
+  margin: 0 auto 10px;
 }
 
 .cta {

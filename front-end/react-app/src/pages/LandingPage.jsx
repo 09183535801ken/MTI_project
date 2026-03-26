@@ -2,9 +2,11 @@
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import Hero from "../components/landing/Hero";
-
 import Testimonial from "../components/landing/Testimonial";
 import '../App.css';
+import landing_image1 from "../assets/crew.jpg";
+import landing_image2 from "../assets/trainings.png";
+import landing_image3 from "../assets/technical.jpg";
 
 
 function LandingPage() {
@@ -18,24 +20,43 @@ function LandingPage() {
       <main>
         <Hero />
 
-        <section id="features" className="feature-section">
+        <section id="features" className="feature-section landing-features">
           <div className="container">
-            <h2>Everything you need to launch</h2>
-            <p className="section-subtitle">
-              A simple starting point that you can customize to match your brand.
-            </p>
             <div className="feature-grid">
-              <div className="feature-card">
-                <h3>Responsive by default</h3>
-                <p>Looks great on desktop, tablet, and mobile without extra work.</p>
+              <div className="feature-card landing_image1">
+                <img src={landing_image1} className="landing_image1" alt="Crewing" />
+                <h3>Crewing</h3>
+                <p>
+                  We provide skilled seafarers
+                  <br />and officers for efficient 
+                  <br />crew management and
+                  <br />
+                   smooth vessel operations.
+                </p>
               </div>
-              <div className="feature-card">
-                <h3>Clean React structure</h3>
-                <p>Organized components that are easy to understand and extend.</p>
+              <div className="feature-card landing_image2">
+                <img src={landing_image2} className="landing_image2" alt="Training" />
+                <h3>Training</h3>
+                <p>
+                 We provide skilled seafarers,
+                  <br />
+                  reliable crewing,
+                  and essential 
+                  <br /> training for safe and efficient
+                  <br /> vessel operations.
+                </p>
               </div>
-              <div className="feature-card">
-                <h3>Modern styling</h3>
-                <p>Soft shadows, rounded corners, and a focus on readability.</p>
+              <div className="feature-card landing_image3">
+                <img src={landing_image3} className="landing_image3" alt="Technical Services" />
+                <h3>Technical Services</h3>
+                <p>
+                  We provide skilled seafarers,
+                  <br />
+                  reliable crewing,
+                  technical services,
+                  <br />
+                  and training for safe and efficient vessel operations.
+                </p>
               </div>
             </div>
           </div>
