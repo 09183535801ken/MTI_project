@@ -1,6 +1,10 @@
 import React from 'react';
 
 import logo from '../../assets/icons/logo/TMI_logo.png' 
+import fb from '../../assets/icons/facebook.png'
+import linkedin from '../../assets/icons/linkedin.png'
+import twt from '../../assets/icons/twitter.png'
+import whtpp from '../../assets/icons/whatsapp.png'
 import { IconGradient, PhoneIcon, EnvelopeIcon } from '../library/IconLibrary';
 
 function Footer() {
@@ -44,10 +48,10 @@ function Footer() {
           <div className="footer-col">
             <h5>Social Media</h5>
             <ul className="socials">
-              <li><a href="#facebook"><img src="/src/assets/icons/facebook.png" alt="Facebook" className="socials-logo" /></a></li>
-              <li><a href="#linkedin"><img src="/src/assets/icons/linkedin.png" alt="Linkedin" className="socials-logo" /></a></li>
-              <li><a href="#twitter"><img src="/src/assets/icons/twitter.png" alt="Twitter" className="socials-logo" /></a></li>
-              <li><a href="#twitter"><img src="/src/assets/icons/whatsapp.png" alt="Whatsapp" className="socials-logo" /></a></li>
+              <li><a href="#facebook"><img src={fb} alt="Facebook" className="socials-logo" /></a></li>
+              <li><a href="#linkedin"><img src={linkedin} alt="Linkedin" className="socials-logo" /></a></li>
+              <li><a href="#twitter"><img src={twt} alt="Twitter" className="socials-logo" /></a></li>
+              <li><a href="#twitter"><img src={whtpp} alt="Whatsapp" className="socials-logo" /></a></li>
             </ul>
           </div>
         </div>
