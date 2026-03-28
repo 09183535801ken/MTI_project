@@ -1,3 +1,4 @@
+import './Hero.css';
 import CountUp from '../../components/animations/CountUp';
 import { IconGradient, VesselIcon, PeopleIcon, TrainingIcon } from '../library/IconLibrary';
 
