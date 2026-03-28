@@ -1,0 +1,112 @@
+.services-section {
+    background-color: var(--accent-bg);
+    padding: 20px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.services-section .container::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    bottom: 50px;
+    width: 2px;
+    background: #e9ecef;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    gap: 60px;
+    position: relative;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.service-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+}
+
+.mockup-img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.1));
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 40px;
+    bottom: -10px;
+}
+
+.chart-icon { right: -20px; color: #5dade2; }
+.lock-icon { left: -20px; color: #5dade2; }
+
+.service-content {
+    flex: 1;
+}
+
+.service-number {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
+    color: #2e86c1; 
+    margin-bottom: 10px;
+}
+
+.service-title {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300; 
+}
+
+.service-description, .service-subtext {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.service-row::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #eee;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .service-row, .row-reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .service-row::after { display: none; }
+}

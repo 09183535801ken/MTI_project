@@ -1,4 +1,5 @@
 import React from 'react';
+import './Testimonial.css'
 import TestimonialCard from '../cards/Testimonial-card';
 import userImg from '../../assets/seaferers/cj.png';
 import userImg2 from '../../assets/seaferers/ken.png';
