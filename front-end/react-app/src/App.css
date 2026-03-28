@@ -30,7 +30,17 @@
   padding: 12px 15%;
 }
 
-/* Header */
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.header-links button {
+  font-size: .8rem;
+}
+
+
 .menu-toggle {
   display: none;
   background: transparent;
@@ -137,7 +147,6 @@
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: var(--);
 }
 
 .btn-primary:hover {
@@ -146,7 +155,7 @@
 
 .btn-secondary {
   background: transparent;
-  border: solid 2px var(--secondary);
+  border: solid 3px var(--secondary);
   color: #fff;
   box-shadow: var(--shadow);
 }
