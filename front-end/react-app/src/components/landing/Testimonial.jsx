@@ -39,7 +39,7 @@ function Testimonial() {
     return (
         <section id="testimonial" className="testimonial-section">
             <div className="testimonial-header">
-                <p>1000+ Happy Professional MTI Seaferers </p>
+                <p>1000+ Certified Professional Seafarers </p>
                 <h2>What our seafarers say</h2>
             </div>
 
