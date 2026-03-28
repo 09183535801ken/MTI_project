@@ -35,8 +35,9 @@ function Header() {
             <a className="nav-link" href="#training">Training</a>
             <a className="nav-link" href="#news">News</a>
             <a className="nav-link" href="#contact">Contact</a>
+            <button className="btn btn-primary">Apply Now</button>
           </nav>
-          <button className="btn btn-primary">Apply Now</button>
+       
         </div>
 
       </div>
