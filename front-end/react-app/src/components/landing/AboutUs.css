@@ -1,0 +1,106 @@
+.aboutUs-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--bg);
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    width: 100%;
+}
+
+.about-left {
+    flex: 1;
+}
+
+/* Badge Styling */
+.badge-tag {
+    background: var(--maritime-gradient); 
+    color: white;
+    padding: 8px 22px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about-title {
+    font-size: 2.8rem;
+    color: var(--tertiary);
+    font-weight: 700;
+    margin: 1.5rem 0;
+    line-height: 1.1;
+}
+
+.about-description p {
+    color: #555;
+    font-size: 1    rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* The Image Grid */
+.about-right {
+    flex: 1.2; /* Give more space to the grid */
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    height: 600px; /* Fixed height for the grid */
+}
+
+.grid-main img, .side-top img, .side-bottom img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+
+.grid-main {
+    grid-row: span 2;
+}
+
+.grid-side {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+
+.about-start-btn {
+    background-color: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.about-start-btn:hover {
+    background-color: #333;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    .about-container {
+        flex-direction: column;
+        text-align: left;
+    }
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .about-grid {
+        height: 400px;
+    }
+}

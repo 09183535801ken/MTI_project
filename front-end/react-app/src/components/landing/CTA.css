@@ -1,8 +1,7 @@
 /* CTA Section */
 .cta-section {
     display: flex;
-    height: 56vh; 
-    min-height: 400px;
+    height: 58vh; 
   }
   
   .cta-container {
