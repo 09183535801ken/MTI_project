@@ -7,6 +7,7 @@ import CTA from "../components/landing/CTA";
 import Services from "../components/landing/Services";
 
 import '../App.css';
+import AboutUs from "../components/landing/AboutUs";
 
 
 function LandingPage() {
@@ -17,17 +18,7 @@ function LandingPage() {
 
       <main>
         <Hero />
-
-      
-        <section id="about" className="section muted">
-          <div className="container">
-            <h2>Built with React + Vite</h2>
-            <p className="section-subtitle">
-              Fast development, instant feedback, and a production-ready build
-              pipeline out of the box.
-            </p>
-          </div>
-        </section>
+        <AboutUs />
         <Services />
         <Testimonial />
         <CTA />

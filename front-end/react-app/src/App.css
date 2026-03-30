@@ -328,6 +328,28 @@
   font-size: 14px;
 }
 
+/* Scroll Effect */ 
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(50px); 
+  transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+  will-change: transform, opacity; 
+}
+
+
+.scroll-reveal.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal.reveal .service-content {
+  transition-delay: 0.1s;
+}
+.scroll-reveal.reveal .service-visual {
+  transition-delay: 0.2s;
+}
+
+
 /* Responsive */
 @media (max-width: 900px) {
   .hero-grid {
