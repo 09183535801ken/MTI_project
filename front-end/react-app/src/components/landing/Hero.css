@@ -2,7 +2,7 @@
 
 .hero-section {
     position: relative;
-    min-height: calc(80vh - 64px);
+    min-height: calc(80vh - 20px);
     display: flex;
     align-items: center;
     justify-content: center;
