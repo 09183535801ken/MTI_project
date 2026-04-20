@@ -6,11 +6,11 @@ import { IconGradient, VesselIcon, PeopleIcon, TrainingIcon } from '../library/I
 function Hero() {
 
   return (
-    <section className="hero-section">
+    <section className="hero-section container">
       {/* inject gradient defs for the icon fills */}
       <IconGradient />
 
-      <div className="hero-container container">
+      <div className="hero-container">
         <div className="hero-text">
           <h1>Dedicated provider of quality maritime solutions.</h1>
           <p>
@@ -23,7 +23,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="stats-card-container">
+      <div className="stats-card-container container">
         <div className="stats-card">
           <div className="stat-item  stat-item1">
             <div className="stat-icon">
