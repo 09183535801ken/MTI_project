@@ -11,8 +11,8 @@ export default function AboutUs() {
     const reveal = useScrollReveal();
 
     return (
-        <section className="aboutUs-section scroll-reveal" id="about" ref={reveal}>
-            <div className="container about-container">
+        <section className="aboutUs-section container scroll-reveal" id="about" ref={reveal}>
+            <div className=" about-container">
                 <div className="about-left">
                     <div className="about-badge">
                         <span className="badge-tag">MTI Overview</span>
