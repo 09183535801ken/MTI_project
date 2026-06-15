@@ -449,3 +449,72 @@
     max-width: 28ch;
   }
 }
+
+/* ==========================================================================
+   📱 CUSTOM MOBILE RESPONSIUVE PATCH OVERRIDES 
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  
+  /* 1. FIX CONTAINER SQUEEZING: Reclaim lost screen real estate */
+  .container,
+  .header-content,
+  .footer-bottom {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 2. HEADER LOGO ADJUSTMENTS: Prevent giant titles from breaking out */
+  .logo-main {
+    font-size: 24px !important; /* Reduces massive font scaling down smoothly */
+  }
+  
+  .logo-subtitle {
+    font-size: 8px !important;
+    padding-left: 2px !important;
+  }
+  
+  .logo-icon {
+    height: 42px !important; /* Shrinks your SVG emblem layout proportions cleanly */
+  }
+
+  /* 3. MOBILE MOBILE DRAWER OVERRIDES */
+  .header-content {
+    position: relative;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+
+  .nav-links {
+    position: absolute !important;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    padding: 24px !important;
+    gap: 16px !important;
+    align-items: flex-start !important; /* Stacks mobile navigation items vertically */
+  }
+
+  /* 4. FOOTER GRID CORRECTIONS: Safely drop columns into a single file */
+  .site-footer__upper .container.footer-grid {
+    flex-direction: column !important;
+    flex-wrap: wrap !important; /* BREAKS THE NOWRAP INSTRUCTION TRAP */
+    gap: 32px !important;      /* Separates column card clusters cleanly */
+  }
+
+  .footer-col {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  /* 5. BRANDING & TEXT WRAPPING IN THE FOOTER */
+  .gradient-text {
+    font-size: 32px !important; /* Prevents ultra-long corporate headers from splitting text unexpectedly */
+  }
+  
+  .site-footer__lower {
+    padding: 1.2rem 0;
+  }
+}
